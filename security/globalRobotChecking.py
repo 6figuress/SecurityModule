@@ -107,8 +107,7 @@ class GlobalRobotChecking():
         #         print("Robot is out of the working area")
         #     self.isCurrentAngleValid = False
 
-    
-        if self.checkingCollison.runSimulation(self.angles) and self.isValid:
+        if self.checkingCollison.isValidConfiguration(self.angles) and self.isValid:
             self.validPositions.append(self.angles)  # Append the current angles to the valid positions list
         else:
             self.validPositions = []

@@ -46,6 +46,9 @@ class RobotCollisionCheck :
 
         return not gotCollision and isInArea
 
+    def isValidMovement(self, startAngles, destAngles):
+        return self.simu.isMoveValid(startAngles=startAngles, destAngles=destAngles)
+
     def runSimulation(self, angles):
 
         collison = False 
@@ -53,8 +56,6 @@ class RobotCollisionCheck :
             collison = self.isValidConfiguration(angles)
 
             if collison is not None:
-                if self.gui:
-                    time.sleep(2)
                 result = collison
                 collison = False  # Reset collison before returning
                 return result

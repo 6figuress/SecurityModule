@@ -27,4 +27,4 @@ security = ["urdf/*.urdf", "urdf/collision/*.stl", "urdf/visual/*.dae"]
 
 [tool.uv.sources]
 urbasic = { git = "https://github.com/6figuress/ur3e-control.git" }
-simulator = { git = "https://github.com/6figuress/phys_simulator.git"}
+simulator = { git = "https://github.com/6figuress/phys_simulator.git", rev="develop"}
