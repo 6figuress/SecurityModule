@@ -834,7 +834,7 @@ wheels = [
 [[package]]
 name = "simulator"
 version = "0.1.0"
-source = { git = "https://github.com/6figuress/phys_simulator.git?rev=develop#64c8976e91d51004684b4e33cffdbdfebcbaf58a" }
+source = { git = "https://github.com/6figuress/phys_simulator.git?rev=develop#562dcbec00f2039c22938bc8947a8eddb3bc4983" }
 dependencies = [
     { name = "numpy" },
     { name = "pybullet" },
