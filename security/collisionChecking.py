@@ -3,7 +3,7 @@ import numpy as np
 import pybullet as p
 import pybullet_data
 
-from simulator.simulator import Simulator, createSimulator
+from simulator.simulator import Simulator, createSimulator, getSimulator
 
 from security.loadUrdf import loadPlane, loadRobot
 
@@ -14,9 +14,15 @@ import plotly.graph_objects as go
 from urbasic import ISCoin, Joint6D
 
 
+createSimulator(gui=False, deltaT=1 / 100, log=False)
+
+
 class RobotCollisionCheck :
     def __init__(self, gui=False, logs=False):
-        self.simu: Simulator = createSimulator(gui=gui, deltaT=1 / 100, log=logs)
+        self.simu: Simulator = getSimulator()
+
+        self.simu.log = logs
+        self.simu.gui = gui
 
         self.logs =logs
         self.gui = gui
