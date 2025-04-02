@@ -41,10 +41,10 @@ class RobotCollisionCheck :
         self.simu.resetAtPosition(angles=angles)
         self.simu.stepSimu()
 
-        isSafe = self.simu.check_collision()
+        gotCollision = self.simu.check_collision()
         isInArea = self.check_working_area()
 
-        return isSafe and isInArea
+        return not gotCollision and isInArea
 
     def runSimulation(self, angles):
 

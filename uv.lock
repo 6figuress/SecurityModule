@@ -811,7 +811,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=2.2.4" },
     { name = "plotly", specifier = ">=6.0.1" },
     { name = "pybullet", specifier = ">=3.2.7" },
-    { name = "simulator", git = "https://github.com/6figuress/phys_simulator.git" },
+    { name = "simulator", git = "https://github.com/6figuress/phys_simulator.git?rev=develop" },
     { name = "urbasic", git = "https://github.com/6figuress/ur3e-control.git" },
 ]
 
@@ -834,7 +834,7 @@ wheels = [
 [[package]]
 name = "simulator"
 version = "0.1.0"
-source = { git = "https://github.com/6figuress/phys_simulator.git#5b4afe3c25a0d3b5be0607dbf085bcae04d18b99" }
+source = { git = "https://github.com/6figuress/phys_simulator.git?rev=develop#64c8976e91d51004684b4e33cffdbdfebcbaf58a" }
 dependencies = [
     { name = "numpy" },
     { name = "pybullet" },
